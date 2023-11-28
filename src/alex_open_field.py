@@ -45,7 +45,7 @@ def reformat_df(df,likelihood_val,max_px_value,frame_limit_val,seconds,fps):
     new_df=pd.DataFrame()
     cols = np.unique([col[0] for col in df.columns])
     for col in cols:
-        box_likelihood = 0.95
+        box_likelihood = 0.8
         if "bodyparts" not in col:
             part = df[col]
             for idx in np.arange(0,len(part.x)):
